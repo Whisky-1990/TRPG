@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>老魏的TRPG作品展</title>
+    <!-- 引入图标库 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background: #1a1a2e;
+            color: #fff;
+            line-height: 1.6;
+        }
+        /* 头部样式 */
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+            border-bottom: 2px solid #d4af37;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            color: #d4af37;
+            text-shadow: 0 0 10px #d4af37;
+        }
+        .nav {
+            margin-top: 15px;
+        }
+        .nav span {
+            margin: 0 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: #eee;
+        }
+        .nav span:hover {
+            color: #d4af37;
+        }
+
+        /* 通用容器 */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        /* 模块标题 */
+        .section-title {
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            padding-left: 15px;
+            border-left: 5px solid;
+        }
+
+        /* ========== DND 奇幻风格 ========== */
+        .dnd-section {
+            margin-bottom: 60px;
+        }
+        .dnd-section .section-title {
+            color: #4fc3f7;
+            border-color: #4fc3f7;
+            text-shadow: 0 0 8px #4fc3f7;
+        }
+        /* DND卡片容器 - 分栏 */
+        .dnd-card-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+        /* DND卡片 */
+        .dnd-card {
+            width: 48%;
+            min-width: 300px;
+            background: linear-gradient(160deg, #2a2a3c, #161625);
+            border: 1px solid #4fc3f7;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 0 15px #4fc3f755;
+            transition: 0.3s;
+        }
+        .dnd-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px #4fc3f788;
+        }
+        .dnd-card h3 {
+            color: #4fc3f7;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        /* 修正换行核心样式 */
+        .dnd-card p {
+            margin: 12px 0;
+            display: flex;
+            align-items: center; /* 垂直居中，修复错位 */
+            gap: 10px;
+            flex-wrap: nowrap;
+            line-height: 1.5;
+        }
+        .dnd-card p span {
+            flex: 1;
+        }
+        .dnd-card i {
+            color: #d4af37;
+            width: 20px;
+            text-align: center;
+            flex-shrink: 0; /* 固定图标宽度，不挤压 */
+        }
+
+        /* ========== COC 写实风格 ========== */
+        .coc-section {
+            margin-bottom: 60px;
+        }
+        .coc-section .section-title {
+            color: #b0b0b0;
+            border-color: #8b4513;
+        }
+        /* COC卡片容器 - 分栏 */
+        .coc-card-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+         }
+        /* COC卡片 */
+        .coc-card {
+            background: #2d2d2d;
+            border: 1px solid #8b4513;
+            border-radius: 8px;
+            padding: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #e0e0e0;
+        }
+        .coc-card h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        /* 修正换行核心样式 */
+        .coc-card p {
+            margin: 12px 0;
+            display: flex;
+            align-items: center; /* 垂直居中，修复错位 */
+            gap: 10px;
+            flex-wrap: nowrap;
+            line-height: 1.5;
+        }
+        .coc-card p span {
+            flex: 1;
+        }
+        .coc-card i {
+            color: #8b4513;
+            width: 20px;
+            text-align: center;
+            flex-shrink: 0; /* 固定图标宽度，不挤压 */
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .dnd-card {
+                width: 100%;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="header">
+        <h1>老魏的TRPG作品集</h1>
+        <div class="nav">
+            <span>全是架空</span>
+            <span>纯属巧合</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- ========== DND 奇幻模组区 ========== -->
+        <div class="dnd-section">
+            <h2 class="section-title">DND模组</h2>
+            <div class="dnd-card-box">
+                <!-- 巨龙僭政 -->
+                <div class="dnd-card">
+                    <h3><i class="fas fa-dragon"></i>巨龙僭政</h3>
+                    <p><i class="fas fa-users"></i><span><strong>玩家人数：</strong>AL模式（总约10人），4人开团，上限7人</span></p>
+                    <p><i class="fas fa-book"></i><span><strong>模组类型：</strong>DND5E，2025.6启动，里程碑升级，预计7次结团</span></p>
+                    <p><i class="fas fa-feather-alt"></i><span><strong>模组简介：</strong>通天堡降落深水城，蓝龙面具得而复失，龙巫教阴谋浮现，前往杜拉格之塔探寻德拉肯号角</span></p>
+                    <p><i class="fas fa-cog"></i><span><strong>房规：</strong>8级开卡，200GP，1件非普通魔法物品（禁飞行），15级结团，开放剑湾/XGE/塔莎</span></p>
+                    <p><i class="fas fa-link"></i><span><strong>关联作品：</strong>风暴巨人的雷霆、冰风谷、博德之门</span></p>
+                    <p><i class="fas fa-id-card"></i><span><strong>车卡要求：</strong>DND5选1</span></p>
+                </div>
+
+                <!-- 刃光杯影 -->
+                <div class="dnd-card">
+                    <h3><i class="fas fa-wine-glass-alt"></i>刃光杯影</h3>
+                    <p><i class="fas fa-users"></i><span><strong>玩家人数：</strong>AL模式（总约15人），3人开团，上限6人</span></p>
+                    <p><i class="fas fa-book"></i><span><strong>模组类型：</strong>DND5R，江湖/奇幻/经营，西征+共同叙事</span></p>
+                    <p><i class="fas fa-feather-alt"></i><span><strong>模组简介：</strong>DR1460，冒险者在博德之门经营酒馆，于杯影间寻找机会、决断生死</span></p>
+                    <p><i class="fas fa-cog"></i><span><strong>房规：</strong>1级开卡，里程碑升级，15级结团，开放剑湾/XGE/塔莎</span></p>
+                    <p><i class="fas fa-info-circle"></i><span><strong>西征模式：</strong>自由组队、沉浸式扮演、世界实时运转、剧情不重复</span></p>
+                    <p><i class="fas fa-id-card"></i><span><strong>车卡要求：</strong>DND10选1</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========== COC 写实模组区 ========== -->
+        <div class="coc-section">
+            <h2 class="section-title">COC模组</h2>
+            <div class="coc-card">
+                <h3><i class="fas fa-user-secret"></i>黑白灰</h3>
+                <p><i class="fas fa-clock"></i><span><strong>模组时长：</strong>8+小时</span></p>
+                <p><i class="fas fa-history"></i><span><strong>模组背景：</strong>1996年12月，香港回归前夕，港英政府即将结束一百余年的殖民统治，权力交接过程中，各方势力明争暗斗，黑白两道暗自角力，港岛形势波谲云诡，12月18日，西九龙警署黄智城督察找到你们，希望你们帮忙协助调查一件案件，但案件发生地点却不属于西九龙警署管理范围，需要各位秘密行事……</span></p>
+                <p><i class="fas fa-id-card"></i><span><strong>车卡要求：</strong>与督察相识、具备办案能力；警察职业为新入职警探，信用≤30</span></p>
+                <p><i class="fas fa-fist-raised"></i><span><strong>推荐技能：</strong>调查、交涉，可避免战斗</span></p>
+                <p><i class="fas fa-gem"></i><span><strong>特殊奖励：</strong>部分背景有单独导入与专属奖励</span></p>
+                <p><i class="fas fa-exclamation-circle"></i><span><strong>免责：</strong>致敬港影，无克系元素，含村规，非严格COC7规则</span></p>
+            </div>
+
+             <div class="coc-card">
+                <h3><i class="fas fa-user-secret"></i>光州1980</h3>
+                <p><i class="fas fa-clock"></i><span><strong>模组时长：</strong>8+小时</span></p>
+                <p><i class="fas fa-history"></i><span><strong>模组背景：</strong>1979年10月26日朴正熙被部下情报部长金载圭刺杀，12月12日全斗焕发动了“12·12肃军政变”，1980年4月中旬，全国爆发了工人及学生示威浪潮， 5月初全斗焕政府公布了戒严令，宣布在汉城取消一切政治活动，禁止集会游行，1980年5月10日，光州海关总部进出口事务司副司长朴宰柱紧急联系到你们，有一批进出口货物需要各位协助调查……</span></p>
+                <p><i class="fas fa-id-card"></i><span><strong>车卡要求：</strong>需与朴司长相识，且具备一定协助办案能力的相关人员，信用评级不得高于30</span></p>
+                <p><i class="fas fa-fist-raised"></i><span><strong>推荐技能：</strong>调查、交涉、战斗、历史（或相关技艺）等</span></p>
+                <p><i class="fas fa-gem"></i><span><strong>特殊奖励：</strong>部分背景有单独导入与专属奖励</span></p>
+                <p><i class="fas fa-exclamation-circle"></i><span><strong>免责：</strong>致敬韩影，无克系元素，含村规，非严格COC7规则</span></p>
+            </div>
+            
+             <div class="coc-card">
+                <h3><i class="fas fa-user-secret"></i>绿岛小夜曲</h3>
+                <p><i class="fas fa-clock"></i><span><strong>模组时长：</strong>6-8小时</span></p>
+                <p><i class="fas fa-history"></i><span><strong>模组背景：</strong>国民党退守台湾省之后，蒋介石依然是台湾省的最高政治领袖，在台湾上拥有至高无上的权力，蒋介石去世之后，其手中权力交接到了他选定的继承人蒋经国手中，1984年10月15日，知名作家、《蒋经国传》作者刘宜良在旧金山自家的车库里被暗杀，在国际上引起了轰动，台湾岛内更是传出政治洗牌、帮派斗法等等江湖传言，10月29日，作为“四海”旅行社精英雇员的你们被社长卓如碧紧急召集……</span></p>
+                <p><i class="fas fa-id-card"></i><span><strong>车卡要求：</strong>所有PC均属于“四海”旅行社雇员，信用评级不得高于30</span></p>
+                <p><i class="fas fa-fist-raised"></i><span><strong>推荐技能：</strong>战斗、调查、交涉等（排名分先后）</span></p>
+                <p><i class="fas fa-gem"></i><span><strong>特殊奖励：</strong>部分背景有单独导入与专属奖励</span></p>
+                <p><i class="fas fa-exclamation-circle"></i><span><strong>免责：</strong>致敬电影，无克系元素，含村规，非严格COC7规则</span></p>
+            </div>
+            
+             <div class="coc-card">
+                <h3><i class="fas fa-user-secret"></i>祇翳之舞</h3>
+                <p><i class="fas fa-clock"></i><span><strong>模组时长：</strong>6小时</span></p>
+                <p><i class="fas fa-history"></i><span><strong>模组背景：</strong>1968年10月，吉林省长春市革命委员会医疗卫生小组收到上级指示，附近山区内的某鄂伦春族背景的村庄出现奇怪的病症，需安排一支医疗小队前往支援，你们接到上级任务，在萧瑟的秋风中踏上了前往村庄的征途……</span></p>
+                <p><i class="fas fa-id-card"></i><span><strong>车卡要求：</strong>所有人均为医疗小队成员，需包括革命委员会指导员一名，负责思想政治组织革命工作，其余人员需具备医疗技能或相关背景</span></p>
+                <p><i class="fas fa-fist-raised"></i><span><strong>推荐技能：</strong>神秘学、医学、调查、交涉，本模组战斗可避免）</span></p>
+                <p><i class="fas fa-gem"></i><span><strong>特殊奖励：</strong>部分背景有单独导入与专属奖励</span></p>
+                <p><i class="fas fa-exclamation-circle"></i><span><strong>免责：</strong>架空模组，与现实无关，无克系元素，含村规，非严格COC7规则</span></p>
+            </div>
+            
+            <div class="coc-card">
+                <h3><i class="fas fa-user-secret"></i>贡嘎之祭</h3>
+                <p><i class="fas fa-clock"></i><span><strong>模组时长：</strong>6小时</span></p>
+                <p><i class="fas fa-history"></i><span><strong>模组背景：</strong>5.21950年1月，中国人民解放军第二野战军第18军开始解放西藏进程，你们所属连队驻扎在贡嘎山山脚，山腰处隐约可见村落和寺庙，根据当地藏民所讲，贡嘎山在藏传佛教中为圣山，你们连队接受任务，安排你们前去贡嘎山村落执行任务，为和平解放西藏做出贡献……</span></p>
+                <p><i class="fas fa-id-card"></i><span><strong>车卡要求：</strong>所有PC均属于中国人民解放军第二野战军第18军战士，信用评级不得高于30</span></p>
+                <p><i class="fas fa-fist-raised"></i><span><strong>推荐技能：</strong>调查、战斗、运动、交涉等（排名分先后））</span></p>
+                <p><i class="fas fa-gem"></i><span><strong>特殊奖励：</strong>部分背景有单独导入与专属奖励</span></p>
+                <p><i class="fas fa-exclamation-circle"></i><span><strong>免责：</strong>架空模组，与现实无关，无克系元素，含村规，非严格COC7规则</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
